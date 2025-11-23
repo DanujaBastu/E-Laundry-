@@ -1,53 +1,89 @@
-# E-Laundry-
-Website untuk bisnis laundry
+# 🧺 E-Laundry: Sistem Manajemen & Pelacakan Laundry
 
-# 🧺 E-Laundry - Sistem Manajemen & Tracking Laundry
-
-**E-Laundry** adalah aplikasi web Fullstack yang dirancang untuk memecahkan masalah komunikasi antara pemilik laundry dan pelanggan. Aplikasi ini memungkinkan pemilik laundry mengelola pesanan dengan mudah dan pelanggan untuk melacak status cucian mereka secara real-time tanpa perlu menghubungi via WhatsApp berulang kali.
+**E-Laundry** adalah aplikasi web sederhana namun berdampak nyata (*impactful*) yang dirancang untuk mendigitalkan operasional usaha laundry kecil menengah. Aplikasi ini menjembatani komunikasi antara pemilik laundry dan pelanggan melalui sistem pelacakan real-time.
 
 ---
 
-## ✨ Fitur Utama
+## 1. Masalah yang Diselesaikan (Problem Statement)
+Di lingkungan usaha laundry konvensional, sering terjadi masalah inefisiensi komunikasi:
+* **Pelanggan:** Harus berulang kali mengirim pesan WhatsApp atau datang ke lokasi hanya untuk bertanya, *"Apakah cucian saya sudah selesai?"*
+* **Pemilik Laundry:** Terganggu oleh *spam chat* pertanyaan status yang berulang, serta risiko kesalahan pencatatan harga dan data pesanan secara manual.
+* **Ketidakpastian:** Tidak ada bukti visual bahwa barang sudah selesai dan siap diambil.
 
-### 👤 Halaman Pengguna (Public)
-- **Real-time Tracking:** Cek status laundry hanya dengan memasukkan Nomor Order (Order ID).
-- **Bukti Foto:** Melihat foto bukti cucian yang sudah selesai/dipacking.
-- **Detail Transaksi:** Melihat rincian berat, jenis layanan, dan total harga.
-- **Direct Contact:** Tombol langsung ke WhatsApp Admin.
-- **Responsive UI:** Tampilan rapi di Desktop maupun Mobile.
+## 2. Solusi yang Dibuat (Solution Overview)
+E-Laundry hadir sebagai solusi digital dengan dua antarmuka utama:
+1.  **Dashboard Admin:** Membantu pemilik mengelola pesanan (CRUD), menghitung harga otomatis berdasarkan berat & layanan, mengubah status pengerjaan, dan mengunggah foto bukti cucian selesai.
+2.  **Halaman Tracking (Publik):** Memungkinkan pelanggan mengecek status laundry mereka secara mandiri hanya dengan memasukkan **Nomor Order**, melihat rincian biaya, serta melihat foto bukti barang yang sudah siap diambil.
 
-### 🛡️ Dashboard Admin (Protected)
-- **Secure Login:** Autentikasi menggunakan JWT & Bcrypt (Password Hashing).
-- **CRUD Orders:** Tambah, Baca, Edit Status, dan Hapus pesanan.
-- **Auto-Calculation:** Harga otomatis terhitung berdasarkan berat dan jenis layanan (Komplit/Kering/Satuan).
-- **Status Management:** Update status dari *Pending* -> *Dicuci* -> *Selesai*.
-- **Image Upload:** Upload bukti foto saat status selesai.
-- **Interactive UI:** Animasi transisi halaman & tombol interaktif.
+## 3. Tech Stack & Fitur Utama
 
----
+### 🛠️ Teknologi (MERN Stack)
+* **Frontend:** React.js (Vite), Framer Motion (Animasi), Axios.
+* **Backend:** Node.js, Express.js.
+* **Database:** MongoDB (via Mongoose).
+* **Keamanan & Tools:** JWT (Auth), Bcrypt (Hashing), Multer (Image Upload).
 
-## 🛠️ Teknologi yang Digunakan
-
-### Frontend
-- **React.js (Vite):** Library UI utama.
-- **Framer Motion:** Untuk animasi transisi halaman dan interaksi tombol.
-- **Axios:** HTTP Client untuk koneksi ke API.
-- **React Router DOM:** Manajemen navigasi halaman.
-
-### Backend
-- **Node.js & Express.js:** Server & REST API.
-- **MongoDB & Mongoose:** Database NoSQL.
-- **Multer:** Middleware untuk handle upload file gambar.
-- **BcryptJS:** Enkripsi password admin.
-- **JsonWebToken (JWT):** Keamanan sesi login.
+### ✨ Fitur Utama
+* **✅ Manajemen Pesanan (CRUD):** Tambah, Lihat, Edit, dan Hapus data laundry.
+* **💰 Kalkulasi Harga Otomatis:** Menghitung total harga secara instan berdasarkan input berat (kg) dan jenis layanan (Cuci Komplit/Kering/Satuan).
+* **🔍 Real-time Tracking:** Pencarian status laundry oleh pelanggan tanpa perlu login.
+* **📸 Upload Bukti Foto:** Admin dapat mengunggah foto barang yang sudah dipacking saat status "Selesai".
+* **🔐 Autentikasi Admin:** Login aman dengan password terenkripsi.
+* **📱 Tampilan Responsif:** Nyaman diakses melalui HP maupun Laptop.
+* **🎨 Animasi Interaktif:** Transisi halaman dan tombol yang halus (smooth).
 
 ---
 
-## 🚀 Cara Menjalankan Proyek (Instalasi)
+## 4. Cara Menjalankan Project (Setup Instructions)
 
-Ikuti langkah ini untuk menjalankan aplikasi di komputer lokal:
+Ikuti langkah-langkah berikut untuk menjalankan aplikasi di komputer lokal:
 
-### 1. Clone Repository
-```bash
-git clone [https://github.com/username-kamu/vibe-coding-pweb.git](https://github.com/username-kamu/vibe-coding-pweb.git)
-cd vibe-coding-pweb
+### Langkah 1: Persiapan Backend
+1.  Buka terminal, masuk ke folder backend:
+    ```bash
+    cd backend-laundry
+    ```
+2.  Install library yang dibutuhkan:
+    ```bash
+    npm install
+    ```
+3.  Buat file `.env` dan sesuaikan koneksi database kamu:
+    ```env
+    MONGO_URI=mongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/lacak_laundry_db
+    SECRET_KEY=rahasia_laundry
+    PORT=5000
+    ```
+4.  **PENTING:** Jalankan script untuk membuat akun Admin pertama kali:
+    ```bash
+    node seedAdmin.js
+    ```
+5.  Jalankan server backend:
+    ```bash
+    npm run dev
+    ```
+
+### Langkah 2: Persiapan Frontend
+1.  Buka terminal baru, masuk ke folder frontend:
+    ```bash
+    cd frontend-laundry
+    ```
+2.  Install library:
+    ```bash
+    npm install
+    ```
+3.  Jalankan aplikasi React:
+    ```bash
+    npm run dev
+    ```
+4.  Buka browser di alamat: `http://localhost:5173`
+
+---
+
+## 5. Akun Demo & Catatan
+Untuk mengakses fitur Admin, gunakan akun berikut (setelah menjalankan `seedAdmin.js`):
+
+* **Username:** `admin`
+* **Password:** `admin123`
+
+---
+*Project ini dibuat untuk memenuhi Tugas Pemrograman Web - Vibe Coding.*
