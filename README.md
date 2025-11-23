@@ -24,13 +24,13 @@ E-Laundry hadir sebagai solusi digital dengan dua antarmuka utama:
 * **Keamanan & Tools:** JWT (Auth), Bcrypt (Hashing), Multer (Image Upload).
 
 ### Fitur Utama
-* ** Manajemen Pesanan (CRUD):** Tambah, Lihat, Edit, dan Hapus data laundry.
-* ** Kalkulasi Harga Otomatis:** Menghitung total harga secara instan berdasarkan input berat (kg) dan jenis layanan (Cuci Komplit/Kering/Satuan).
-* ** Real-time Tracking:** Pencarian status laundry oleh pelanggan tanpa perlu login.
-* ** Upload Bukti Foto:** Admin dapat mengunggah foto barang yang sudah dipacking saat status "Selesai".
-* ** Autentikasi Admin:** Login aman dengan password terenkripsi.
-* ** Tampilan Responsif:** Nyaman diakses melalui HP maupun Laptop.
-* ** Animasi Interaktif:** Transisi halaman dan tombol yang halus (smooth).
+* Manajemen Pesanan (CRUD) : Tambah, Lihat, Edit, dan Hapus data laundry.
+* Kalkulasi Harga Otomatis dimana menghitung total harga secara instan berdasarkan input berat (kg) dan jenis layanan (Cuci Komplit/Kering/Satuan).
+* Real-time Tracking dengan pencarian status laundry oleh pelanggan tanpa perlu login.
+* Upload Bukti Foto yang mana admin dapat mengunggah foto barang yang sudah dipacking saat status "Selesai".
+* Autentikasi Admin dan login aman dengan password terenkripsi.
+* Tampilan Responsif nyaman diakses melalui HP maupun Laptop.
+* Animasi Interaktif, transisi halaman dan tombol yang halus (smooth).
 
 ---
 
