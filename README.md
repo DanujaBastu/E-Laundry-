@@ -3,11 +3,6 @@ Website untuk bisnis laundry
 
 # 🧺 E-Laundry - Sistem Manajemen & Tracking Laundry
 
-![License](https://img.shields.io/badge/License-MIT-blue.svg)
-![React](https://img.shields.io/badge/Frontend-React%20%2B%20Vite-61DAFB)
-![Node](https://img.shields.io/badge/Backend-Express%20%2B%20Node.js-339933)
-![MongoDB](https://img.shields.io/badge/Database-MongoDB-47A248)
-
 **E-Laundry** adalah aplikasi web Fullstack yang dirancang untuk memecahkan masalah komunikasi antara pemilik laundry dan pelanggan. Aplikasi ini memungkinkan pemilik laundry mengelola pesanan dengan mudah dan pelanggan untuk melacak status cucian mereka secara real-time tanpa perlu menghubungi via WhatsApp berulang kali.
 
 ---
