@@ -6,14 +6,14 @@
 
 ## 1. Masalah yang Diselesaikan (Problem Statement)
 Di lingkungan usaha laundry konvensional, sering terjadi masalah inefisiensi komunikasi:
-* **Pelanggan:** Harus berulang kali mengirim pesan WhatsApp atau datang ke lokasi hanya untuk bertanya, *"Apakah cucian saya sudah selesai?"*
-* **Pemilik Laundry:** Terganggu oleh *spam chat* pertanyaan status yang berulang, serta risiko kesalahan pencatatan harga dan data pesanan secara manual.
-* **Ketidakpastian:** Tidak ada bukti visual bahwa barang sudah selesai dan siap diambil.
+* **Pelanggan** harus berulang kali mengirim pesan WhatsApp atau datang ke lokasi hanya untuk bertanya, *"Apakah cucian saya sudah selesai?"*
+* **Pemilik Laundry** terganggu oleh *spam chat* pertanyaan status yang berulang, serta risiko kesalahan pencatatan harga dan data pesanan secara manual.
+* **Ketidakpastian** akan bukti visual bahwa barang sudah selesai dan siap diambil.
 
 ## 2. Solusi yang Dibuat (Solution Overview)
 E-Laundry hadir sebagai solusi digital dengan dua antarmuka utama:
-1.  **Dashboard Admin:** Membantu pemilik mengelola pesanan (CRUD), menghitung harga otomatis berdasarkan berat & layanan, mengubah status pengerjaan, dan mengunggah foto bukti cucian selesai.
-2.  **Halaman Tracking (Publik):** Memungkinkan pelanggan mengecek status laundry mereka secara mandiri hanya dengan memasukkan **Nomor Order**, melihat rincian biaya, serta melihat foto bukti barang yang sudah siap diambil.
+1.  **Dashboard Admin** membantu pemilik mengelola pesanan (CRUD), menghitung harga otomatis berdasarkan berat & layanan, mengubah status pengerjaan, dan mengunggah foto bukti cucian selesai.
+2.  **Halaman Tracking (Publik)** memungkinkan pelanggan mengecek status laundry mereka secara mandiri hanya dengan memasukkan **Nomor Order**, melihat rincian biaya, serta melihat foto bukti barang yang sudah siap diambil.
 
 ## 3. Tech Stack & Fitur Utama
 
@@ -23,14 +23,14 @@ E-Laundry hadir sebagai solusi digital dengan dua antarmuka utama:
 * **Database:** MongoDB (via Mongoose).
 * **Keamanan & Tools:** JWT (Auth), Bcrypt (Hashing), Multer (Image Upload).
 
-### ✨ Fitur Utama
-* **✅ Manajemen Pesanan (CRUD):** Tambah, Lihat, Edit, dan Hapus data laundry.
-* **💰 Kalkulasi Harga Otomatis:** Menghitung total harga secara instan berdasarkan input berat (kg) dan jenis layanan (Cuci Komplit/Kering/Satuan).
-* **🔍 Real-time Tracking:** Pencarian status laundry oleh pelanggan tanpa perlu login.
-* **📸 Upload Bukti Foto:** Admin dapat mengunggah foto barang yang sudah dipacking saat status "Selesai".
-* **🔐 Autentikasi Admin:** Login aman dengan password terenkripsi.
-* **📱 Tampilan Responsif:** Nyaman diakses melalui HP maupun Laptop.
-* **🎨 Animasi Interaktif:** Transisi halaman dan tombol yang halus (smooth).
+### Fitur Utama
+* ** Manajemen Pesanan (CRUD):** Tambah, Lihat, Edit, dan Hapus data laundry.
+* ** Kalkulasi Harga Otomatis:** Menghitung total harga secara instan berdasarkan input berat (kg) dan jenis layanan (Cuci Komplit/Kering/Satuan).
+* ** Real-time Tracking:** Pencarian status laundry oleh pelanggan tanpa perlu login.
+* ** Upload Bukti Foto:** Admin dapat mengunggah foto barang yang sudah dipacking saat status "Selesai".
+* ** Autentikasi Admin:** Login aman dengan password terenkripsi.
+* ** Tampilan Responsif:** Nyaman diakses melalui HP maupun Laptop.
+* ** Animasi Interaktif:** Transisi halaman dan tombol yang halus (smooth).
 
 ---
 
@@ -86,4 +86,3 @@ Untuk mengakses fitur Admin, gunakan akun berikut (setelah menjalankan `seedAdmi
 * **Password:** `admin123`
 
 ---
-*Project ini dibuat untuk memenuhi Tugas Pemrograman Web - Vibe Coding.*
